@@ -27,7 +27,7 @@ jobs:
           path: 'obj/**/*.so'
 
   build-ios:
-    runs-on: self-hosted
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
 
