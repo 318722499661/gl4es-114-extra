@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build GL4ES
-            run: |
+        run: |
               brew install ninja
               wget https://github.com/leetal/ios-cmake/raw/master/ios.toolchain.cmake
               cmake -B build \
