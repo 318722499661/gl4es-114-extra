@@ -34,7 +34,7 @@ jobs:
       - name: Build GL4ES
         run: |
           wget https://github.com/leetal/ios-cmake/raw/master/ios.toolchain.cmake
-          cmake -S . -B build \
+          cmake -G Xcode -S . -B build \
             -DCMAKE_TOOLCHAIN_FILE=ios.toolchain.cmake \
             -DDEFAULT_ES=2 \
             -DNOX11=ON \
@@ -42,7 +42,7 @@ jobs:
             -DSTATICLIB=OFF \
             -DPLATFORM=OS64 \
             -DCMAKE_C_FLAGS=-Wno-error=implicit-function-declaration \
-            -DCMAKE_OSX_SYSROOT=iossimulator
+            -DCMAKE_OSX_SYSROOT=iphonesimulator
           cmake --build build --config RelWithDebInfo --target GL
 
       - name: Upload lib
