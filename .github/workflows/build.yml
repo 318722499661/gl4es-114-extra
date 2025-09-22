@@ -22,7 +22,7 @@ jobs:
           name: gl4es-114-android
           path: 'obj/**/*.so'
   build-ios:
-    runs-on: macos-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - name: Build GL4ES
